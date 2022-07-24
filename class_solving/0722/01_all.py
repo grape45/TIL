@@ -13,4 +13,4 @@ for coin in coins:
     # 그 딕셔너리의 closing price
     if coin == 'data':
         continue
-    print(coin, coins.get(coin).get('closing_price')) ------- 카카오개발자 페이지 들어가기 전 str 'get' 부분만 다시 돌려 보기
+    print(coin, coins.get(coin).get('closing_price')) ------- modified code
