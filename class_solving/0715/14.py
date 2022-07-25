@@ -11,6 +11,6 @@ word = 'apple'
 count = 0
 for char in word:
     if char == 'a':
-        # a일ㄸ마다 +1
+        # a일때마다 +1
         count += 1
 print(count)

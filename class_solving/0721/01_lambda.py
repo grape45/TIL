@@ -23,7 +23,7 @@ def multiple_3(n):
 
 print(list(map(multiple_3, numbers)))
 
-# 이 함수는 계쏙 사용되지 않고, map에서만 사용된다.
+# 이 함수는 계속 사용되지 않고, map에서만 사용된다.
 # 임시적인 함수를 만들고 싶다. => lambda
 
 print(list(map(lambda n : n*3, numbers)))

@@ -1,5 +1,2 @@
-A = input()
-B = input()
-# A > 0, B > 10
-
+A, B = map(int, input().split())
 print(A + B)
