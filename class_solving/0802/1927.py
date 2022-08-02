@@ -1,4 +1,5 @@
 # 최소 힙
+# input 핸들링 전
 '''
 for solving idea
 1. 자연수 -> 배열에 넣는 heapq.heappush
@@ -6,12 +7,7 @@ for solving idea
 '''
 import heapq
 
-N = int(input())
-
-for _ in range(N):
-    n = int(input())
-
-# numbers = [0, 12345678, 1, 2, 0, 0, 0, 0, 32]
+numbers = [0, 12345678, 1, 2, 0, 0, 0, 0, 32]
 
 heap = []
 # heapq.heapify(heap)
@@ -21,7 +17,7 @@ for number in numbers:
     if number != 0:
         heapq.heappush(heap, number)
     else:
-        if len(heap): # len(heap) == 0: 과 같지만, == 0: 은 생략해도 참이 된다.
+        if len(heap) == 0: # len(heap): 까지 작성해도 동일한 코드
             print(0)
         else:
-            print(heapq.heappop(heap))
+            print(heapq.heappop(heap)) 
