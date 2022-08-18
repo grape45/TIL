@@ -140,9 +140,13 @@ id      waist
 > 키는 미터 단위로 계산한다.
 
 ```sql
+SELECT COUNT(*) FROM healthcare WHERE weight * 10000/(height*height) >= 30;
 ```
 
 ```
+COUNT(*)
+--------
+53121   
 ```
 
 ### 12. 흡연(smoking)이 3인 사람의 BMI지수가 제일 높은 사람 순서대로 5명의 id와 BMI를 출력하시오.
@@ -151,6 +155,7 @@ id      waist
 > 키는 미터 단위로 계산한다.
 
 ```sql
+SELECT id, weight, height, weight/((height*0.01)*(height*0.01)) AS BMI FROM healthcare WHERE smorking = 3 ORDER BY BMI DESC LIMIT 5;
 ```
 
 ```
