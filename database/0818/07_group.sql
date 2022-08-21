@@ -15,4 +15,9 @@ SELECT last_name, age FROM users WHERE last_name = '곽';
 SELECT * FROM users LIMIT 5;
 
 -- GROUP BY WHERE를 쓰고 싶은데?
-SELECT last_name, COUNT(last_name) FROM usrs WHERE GROUP BY last_name
+-- 100번 이상 등장한 성만 출력하고 싶음
+SELECT last_name, COUNT(last_name) FROM users WHERE COUNT(last_name) > 100 GROUP BY last_name;
+-- 오류 발생
+-- 결론 : 이렇게 작성이 불가능함. 이는 집계함수 처리 순서와 관련됨
+
+SELECT last_name, COUNT(last_name) FROM users GROUP BY last_name ,.,., 
