@@ -9,7 +9,7 @@ arr = []
 for _ in range(n):
     arr.append(int(stdin.readline()))
 
-c = False # c = 현재 매수 코인이 있는가?
+c = False 
 coin = 0 # coin의 개수 cnt
 for i in range(n - 1):
     if not c and arr[i] < arr[i + 1]:
@@ -24,4 +24,5 @@ for i in range(n - 1):
 if c:
     W += coin * arr[-1]
 
+print(W)
 
