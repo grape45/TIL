@@ -13,8 +13,9 @@
 '''
 
 # 분류 알고리즘 : 부르트포스, 백트레킹?, dfs?
-# dfs보단 백트레킹에 가까운 풀이라고 생각됨
+# 사실 백트레킹 개념까지 안가고, dfs로 풀이 가능한 문제임
 # 백트래킹과 dfs 차이에 대한 공부 좀 더 명확하게 하기!
+# 참고 사이트 : https://veggie-garden.tistory.com/24
 
 n = int(input())
 operator = list(map(int, input().split()))
