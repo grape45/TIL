@@ -16,5 +16,27 @@
 
 # 코드 구현은 의외로 간단하나, 접근 방법 및 고려해야 할 사항을 찾는 것이 어려운 문제 (정답률 25%)
 
+# 우열님 코드
+from collections import deque
+n, k = map(int, input.split())
 
+visited = [0 * (100001)]
 
+queue = deque()
+queue.append(n)
+
+while queue:
+    cur = queue.popleft()
+
+    if cur == k:
+        break
+
+    dis = [cur -1, cur + 1, 2 * cur]
+
+    for d in dis:
+        if -1 < d < 100001: # 이 조건이 빠지면 메모리 초과로 런타임 오류 발생
+            if visited[d] == 0:
+                visited[d] = visited[cur] + 1
+                queue.append(d)
+
+print(visited[k])
