@@ -40,3 +40,8 @@ while queue:
                 queue.append(d)
 
 print(visited[k])
+
+# https://zidarn87.tistory.com/248
+import sys
+from collections import deque
+n, k = map(int, sys.stdin.readline().split())
