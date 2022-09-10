@@ -54,4 +54,3 @@ dfs(1, operator[0], add, sub, mul, div)
 
 print(max_value)
 print(min_value)
-
