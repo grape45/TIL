@@ -7,7 +7,7 @@ t = int(input())
 for _ in range(t):
   n = int(input())
   note1 = list(map(int, input().split()))
-  note1 = {n:0 for n in note1}
+  note1 = {n:0 for n in note1} # 시간초과 해결 위함
   m = int(input())
   note2 = list(map(int, input().split()))
   for n in note2:
